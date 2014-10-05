@@ -1,0 +1,264 @@
+﻿/****************************************************
+Table of contents
+-------------------------------------------------
+#fonts, colors, weights and line-heights
+#background-colors
+#jumbotron
+#icons
+#Durandal Modals
+#Displays
+
+****************************************************/
+@font-face {
+    font-family: 'windsongregular';
+    src: url('fonts/wingsongregular/windsong-webfont.eot');
+    src: url('fonts/wingsongregular/windsong-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/wingsongregular/windsong-webfont.woff') format('woff'),
+         url('fonts/wingsongregular/windsong-webfont.ttf') format('truetype'),
+         url('fonts/wingsongregular/windsong-webfont.svg#windsongregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.spacer-xlarge { margin-top: 35px; } 
+.spacer-large { margin-top: 20px; }
+.spacer-medium { margin-top: 15px; }
+.spacer-small { margin-top: 10px; }
+.list-accomodation .list-group-item { min-height: 60px; }
+
+.splash { padding-top: 200px; }
+.container { min-width: 320px; }
+
+/****************************************************
+#fonts, colors, weights and line-heights
+****************************************************/
+html { font-size: 100%; }
+body {
+    font-family: "Lucida Grande",Helvetica,Verdana,sans-serif;
+    font-size: 1em;
+}
+.wingsong, .jumbotron h1 { font-family: 'windsongregular'; }
+
+.jumbotron h1, .header h1, .modal-header, h1.main-title  { color: #fff; }
+h1, p, a, .control-label, label { color: #336663; }
+.navbar a { font-weight: bold; }
+
+.text-default {
+    color: #0bb2a8;
+}
+
+a { text-decoration: underline; }
+.navbar a, .well-default, .nav-pills a, .text-primary { color: #fff; }
+
+.nav-pills a:hover { color: #000; }
+.nav-pills a { text-decoration: none; }
+/****************************************************
+#background-colors
+****************************************************/
+.nav-pills .active a { background-color: #fff; }
+/*primary green*/
+.navbar, .well-default, .btn-success, .modal-header { background-color: #0bb2a8; }
+
+/* light green */
+.nav>li>a:hover, .nav-pills>li.active>a, .nav-pills>li.active>a:hover { background-color: #d5fffb; color: #0bb2a8;  }
+
+/*dark green*/
+.btn-success:hover, .nav-pills>li.active>a, .nav-pills>li.active>a:focus { background-color: #007d8a;  color: #fff; }
+
+/*dark purple*/
+.btn-primary { background-color: #82078d;  }
+/*light purple*/
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, btn-primary:active { background-color: #e4ceeb; color: #82078d; }
+.btn-primary, .btn-success { border: 0px none; }
+
+/*
+.modal { background-color: #0bb2a8; }
+.modal.fade { opacity: 0.2; }
+.modal-dialog { opacity: 1; }*/
+/****************************************************, 
+#jumbotron
+****************************************************/
+.jumbotron {
+	 background: transparent url(img/header.png) no-repeat center center;
+     padding: 0px;
+     min-height: 302px;
+     margin: 15px 0px;
+}
+
+.jumbotron h1 { margin-bottom: 40px; padding-top:5px; font-size: 50px; width: 100%; text-align: center;  }
+
+.jumbotron .info {
+    background: transparent url(img/box-label-medium.png) no-repeat center center;
+    color: #fff;
+    padding: 95px 40px;
+    height: 245px;
+    max-width: 458px;
+    margin-top: -73px;
+    background-size: 100%;
+}
+
+.jumbotron .info h3, .jumbotron .info span { margin: 0px; padding: 0px;line-height: 15px; font-size: 22px; }
+
+/****************************************************
+#icons
+****************************************************/
+*[class*='icon-wedding-'] 
+{
+    width: 40px; 
+    height: 53px;
+    display: block;
+}
+.icon-wedding-couple-white {
+ background: transparent url(img/white-couple.png) no-repeat; 
+}
+
+.icon-wedding-couple-green {
+ background: transparent url(img/green-couple.png) no-repeat; 
+}
+
+.icon-wedding-surfer {
+    width: 103px;
+    background: transparent url(img/surfer.png) no-repeat; 
+}
+
+.icon-wedding-nz {
+    width: 38px;
+    background: transparent url(img/new-zealand.png) no-repeat; 
+}
+
+.icon-wedding-disco {
+    width: 38px;
+    background: transparent url(img/disco.png) no-repeat; 
+}
+
+.icon-wedding-jandals {
+    width: 45px;
+    background: transparent url(img/jandals.png) no-repeat; 
+}
+.icon-wedding-kiwibird {
+    width: 70px;
+    background: transparent url(img/kiwibird.png) no-repeat; 
+}
+
+.icon-wedding-irish {
+    width: 49px;
+    background: transparent url(img/shamrock.png) no-repeat; 
+}
+/****************************************************
+#header 
+****************************************************/
+.header {
+    background-color: #fff;
+	min-height: 213px;
+	display: block;
+}
+
+.navbar { margin-bottom: 0px; }
+.navbar-btn, .navbar-btn:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
+.navbar-btn .icon-bar {
+    background-color: #fff; width: 100%;
+}
+
+.panel-heading { margin-top: 0px; }
+.panel-default .panel-heading { background-color: #0bb2a8; color: #fff; }
+.panel-default .panel-heading .icon-wedding-couple-white { margin-top: -10px; }
+
+.panel-secondary .panel-heading { background-color: #000; color: #fff; }
+.panel-default .panel-heading *[class*="icon-wedding-"], .panel-secondary .panel-heading *[class*="icon-wedding-"] {
+    margin-top: -60px;
+}
+
+.well-default  *[class*="icon-wedding-"] {
+    margin-top: -72px;
+}
+
+/****************************************************
+#content 
+****************************************************/
+.content { padding-bottom: 80px; }
+.content { background: #fff url(img/flowers.png) no-repeat bottom right; }
+
+.loader {
+    margin: 6px 8px 4px 8px;
+    visibility: hidden;
+}
+
+.loader.active {
+    visibility: visible;
+}
+/****************************************************
+#Durandal Modals
+****************************************************/
+.modalBlockout {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    
+    pointer-events: auto;
+    
+    -webkit-backface-visibility: hidden;
+    
+    -webkit-transition: opacity 0.1s linear; 
+	-moz-transition: opacity 0.1s linear; 
+	-o-transition: opacity 0.1s linear;
+	transition: opacity 0.1s linear; 
+}
+
+.modalHost {
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    opacity: 0;
+    
+    -webkit-backface-visibility: hidden;
+
+    -webkit-transition: opacity 0.1s linear; 
+	-moz-transition: opacity 0.1s linear; 
+	-o-transition: opacity 0.1s linear;
+	transition: opacity 0.1s linear;
+}
+
+.messageBox {
+    background-color: white;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    outline: none;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    min-width: 300px;
+}
+iframe {
+    border: 1px solid #fff;
+}
+
+.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, 
+.table tfoot > tr > td {
+    border-top: 0px none;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    background-color: #7f2293;
+    border-color: #7f2293;
+}
+
+/****************************************************
+#Displays
+****************************************************/
+@media (min-width: 767px) {
+   .content { padding-bottom: 50px; }
+   .jumbotron { background-size: 100%; }
+}

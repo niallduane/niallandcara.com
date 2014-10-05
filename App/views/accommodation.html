@@ -1,0 +1,56 @@
+﻿<section class="clearfix">
+<div class="panel panel-default">
+    <ul id="list" class="nav nav-pills panel-heading">
+        <li class="active"><a href="#motels" data-toggle="tab">Motels & Campsites</a></li>
+        <li><a href="#beds" data-toggle="tab">Bed & Breakfasts</a></li>
+        <li><a href="#housing" data-toggle="tab" class="js-tooltip" title="Beach Houses">Baches</a></li>
+    </ul>
+    <div class="panel-body tab-content" data-bind="with: accommodationList">
+        <div class="tab-pane active" id="motels">
+            <div class="row">
+                <div data-bind="foreach: motels">
+                    <div class="col-xs-6 col-lg-4 spacer-medium">
+                        <a href="" data-bind="text: name, attr: { href: web }, visible: ($data.web != '')"></a>
+                        <div data-bind="text: name, visible: ($data.web == '')"></div>
+                        <div data-bind="text: address1"></div>
+                        <div data-bind="text: address2"></div>
+                        <div data-bind="text: address3"></div>
+                        <div data-bind="visible: (email != '')"><label>E: </label> <a href="" data-bind="    text: email, attr: { href: email }"></a></div>
+                        <div data-bind="visible: (tel != '')"><label>T: </label> <a href="" rel="tel"  data-bind="    text: tel, attr: { href: tel }"></a></div>
+                    </div>
+                </div>
+            </div><!-- .row -->
+        </div>
+        <div class="tab-pane" id="beds">
+            <div class="row">
+                <div data-bind="foreach: bedbreakfasts">
+                    <div class="col-xs-6 col-lg-4 spacer-medium">
+                        <a href="#" data-bind="text: name, attr: { href: web }, visible: ($data.web != '')"></a>
+                        <div data-bind="text: name, visible: ($data.web == '')"></div>
+                        <div data-bind="text: address1"></div>
+                        <div data-bind="text: address2"></div>
+                        <div data-bind="text: address3"></div>
+                        <div data-bind="visible: (email != '')"><label>E: </label> <a href="" data-bind="    text: email, attr: { href: email }"></a></div>
+                        <div data-bind="visible: (tel != '')"><label>T: </label> <a href="" rel="tel"  data-bind="    text: tel, attr: { href: tel }"></a></div>
+                    </div>
+                </div><!-- data-bind -->
+            </div><!-- .row -->
+        </div>
+        <div class="tab-pane" id="housing">
+            <div class="row">
+                <div data-bind="foreach: beachhouses">
+                    <div class="col-xs-6 col-lg-4 spacer-medium">
+                        <a href="" data-bind="text: name, attr: { href: web }, visible: ($data.web != '')"></a>
+                        <div data-bind="text: name, visible: ($data.web == '')"></div>
+                        <div data-bind="text: address1"></div>
+                        <div data-bind="text: address2"></div>
+                        <div data-bind="text: address3"></div>
+                        <div data-bind="visible: (email != '')"><label>E: </label> <a href="" data-bind="    text: email, attr: { href: email }"></a></div>
+                        <div data-bind="visible: (tel != '')"><label>T: </label> <a href="" rel="tel"  data-bind="    text: tel, attr: { href: tel }"></a></div>
+                    </div>
+                </div>
+            </div><!-- .row -->
+        </div>
+    </div>
+</div>
+</section><!-- Accomodation list -->

@@ -1,0 +1,47 @@
+﻿<section>
+    <h1>Dictionary</h1>
+    <p class="well well-info">
+        To promote international diplomacy, we created this page. Use as a guide when talking to your international companion.
+    </p>
+    <div class="row" data-bind="with: dictionaryList">
+        <div class="col-lg-6 spacer-xlarge">
+            <div class="panel panel-default panel-secondary">
+                <h2 class="panel-heading">Kiwi <i class="pull-right icon-wedding-kiwibird"></i></h2>
+                <div class="panel-body">
+                    <table class="table table-condensed">
+                        <tbody data-bind="foreach: kiwi">
+                            <tr>
+                                <th data-bind="text: term"></th>
+                                <td data-bind="text: description"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+                    <h4>Helpful tip</h4>
+                    <p>
+                        When chatting to a kiwi, you can mention anything to do with All Blacks and anything related to rugby,
+                    </p>
+                    <p>
+                        Just don't bother mentioning any other sport! 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 spacer-xlarge">
+            <div class="panel panel-default">
+                <h2 class="panel-heading">Irish  <i class="pull-right icon-wedding-irish"></i></h2>
+                <div class="panel-body">
+                    <table class="table table-condensed">
+                        <tbody data-bind="foreach: irish">
+                            <tr>
+                                <th data-bind="text: term"></th>
+                                <td data-bind="text: description"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

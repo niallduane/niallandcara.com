@@ -1,0 +1,70 @@
+﻿<link rel="stylesheet" type="text/css" href="Scripts/tags-input/jquery.tagsinput.css" />
+<form class="form-horizontal clearfix"  data-bind='validationOptions: { insertMessages: false }, visible: isFormVisible'>
+    <div class="form-group clearfix">
+        <label for="" class="col-sm-3 control-label">Name(s)</label>
+        <div class="col-sm-9">
+            <textarea id="name" name="name" cols="20" rows="2" class="form-control" data-bind="value: name"  required placeholder="Name(s) separated by a comma"></textarea>
+        </div>
+    </div>
+
+    <div class="alert alert-dismissable alert-danger clearfix"  data-bind="validationMessage: name"></div>
+
+    <div class="form-group  clearfix">
+        <label class="col-sm-3 control-label">Email</label>
+        <div class="col-sm-9">
+            <input id="email" name="email" type="email" class="form-control" data-bind="value: email" required  placeholder="Your email address"/>
+        </div>
+        
+    </div>
+    <div class="alert alert-dismissable alert-danger clearfix" data-bind="validationMessage: email"></div>
+
+    <div class="form-group">
+        <label class="col-sm-12">Dietary Requirements</label>
+        <div class="col-sm-12">
+            <textarea id="requirements" name="requirements" cols="20" rows="4" class="form-control" data-bind="value: requirements" placeholder="Your dietary requirements"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-12">Comments</label>
+        <div class="col-sm-12">
+            <textarea id="comments" name="requirements" cols="20" rows="8" class="form-control" data-bind="value: comments" placeholder="Maybe a song suggestion"></textarea>
+        </div>
+    </div>
+
+    <div class="alert alert-dismissable alert-danger clearfix" data-bind="text: serverError, visible: (serverError() != '')"></div>
+
+    <ul class="alert alert-danger clearfix" data-bind="visible: (errors().length == 0)">
+       <li data-bind="validationMessage: name"></li> 
+       <li data-bind="validationMessage: email"></li>
+       <li data-bind="text: serverError, visible: (serverError() != '')"></li>
+    </ul>
+
+    <div class="spacer-small col-sm-12 col-lg-offset-4 col-lg-8">
+        <button type="submit" class="btn btn-success" data-bind="click: confirm">Hooray, Can't wait</button>
+        <button type="submit" class="btn  btn-primary" data-bind="click: cancel">No, Can't make it</button>
+    </div>
+</form>
+<div class="clearfix" data-bind="visible: showSuccess">
+    <h4>That's what we want to hear!!!</h4>
+    <p>We look forward to seeing you on our big day.</p>
+    <p>Check out the rest of the website for info on location, accommodation, and details of the wedding day.</p>
+    <div class="spacer-small col-sm-12 col-lg-offset-4 col-lg-8">
+        <button type="submit" class="btn  btn-primary" data-bind="click: showForm">Back to RSVP form</button>
+    </div>
+</div>
+<div class="clearfix" data-bind="visible: showCancel">
+    <p>
+        That’s a shame you can’t make it to our big day.
+    </p>
+    <p>
+        We’re planning to hold a party in Ireland in August 2014, so will let you know details and hope to see you there.
+    </p>
+
+    <div class="spacer-small col-sm-12 col-lg-offset-4 col-lg-8">
+        <button type="submit" class="btn  btn-primary" data-bind="click: showForm">Back to RSVP form</button>
+    </div>
+</div>
+<div class="text-center clearfix" data-bind="visible: showLoading">
+    <i class="icon-spinner icon-5x icon-spin active text-default"></i>
+</div>
